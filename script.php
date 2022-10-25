@@ -9,53 +9,57 @@ $modalidade = $_POST['modalidade'];
 	if(empty($nome))
 	{
 		$_SESSION['erro']="campo nome está vazio";
+		header(string:'location: index.php');
 		return;
 	}
 	else if(is_numeric($nome))
 	{
-		echo "Campo nome foi preenchido com números";
-		return 0;
+		$_SESSION['erro']="Campo nome foi preenchido com números";
+		header(string:'location: index.php');
+		return;
 	}
 	else echo "Nome da/o Atetla: ". $nome . "</br>";
 
 	if (empty($idade)) 
 	{
-		echo "O campo idade está vazio";
-		return 0;
+		$_SESSION['erro']="O campo idade está vazio";
+		header(string:'location: index.php');
+		return;
 	}
 	else if(!is_numeric($idade)) 
 	{
-		echo "O campo idade foi preenchido com outros caracteres não numéricos";
-		return 0;
+		$_SESSION['erro']="O campo idade foi preenchido com outros caracteres não numéricos";
+		header(string:'location: index.php');
+		return;
 	}
 	else
-		echo "Idade da/o atetla: ". $idade . "</br>"; 
+	$_SESSION['erro']="Idade da/o atetla: ". $idade . "</br>"; 
 	if($sexo === 'feminino')
 	{
-		echo "Sexo da atetla é feminino <br/>";
+		$_SESSION['erro']="Sexo da atetla é feminino <br/>";
 	}
 	else
 	 {
-		echo "Sexo do atetla é masculino <br/>";
+		$_SESSION['erro']="Sexo do atetla é masculino <br/>";
 	}
 	if($distancia === "1")
 	{
-		echo "A distância selecionada é de 1 KM <br/>";
+		$_SESSION['erro']="A distância selecionada é de 1 KM <br/>";
 	}
 	else 
 	{
-		echo "A distância escolhida é de 3 KM <br/>";
+		$_SESSION['erro']="A distância escolhida é de 3 KM <br/>";
 	}
 	if($modalidade === 'convencional')
 	{
-		echo "A modalidade escolhida é: Convencional <br/>";
+		$_SESSION['erro']="A modalidade escolhida é: Convencional <br/>";
 	}
 	elseif ($modalidade === 'on')
 	{
-		echo "A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
+		$_SESSION['erro']="A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
 	}
 	else
 	{
-		echo "A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>"
+		$_SESSION['erro']="A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>"
 	}
 ?>
