@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 $sexo = $_POST['sexo'];
@@ -8,8 +8,8 @@ $modalidade = $_POST['modalidade'];
 
 	if(empty($nome))
 	{
-		echo "Campo nome está vazio";
-		return 0;
+		$_SESSION['erro']="campo nome está vazio";
+		return;
 	}
 	else if(is_numeric($nome))
 	{
