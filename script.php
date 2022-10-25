@@ -36,30 +36,30 @@ $modalidade = $_POST['modalidade'];
 	$_SESSION['erro']="Idade da/o atetla: ". $idade . "</br>"; 
 	if($sexo === 'feminino')
 	{
-		$_SESSION['erro']="Sexo da atetla é feminino <br/>";
+		$_SESSION['sucesso']="Sexo da atetla é feminino <br/>";
 	}
 	else
 	 {
-		$_SESSION['erro']="Sexo do atetla é masculino <br/>";
+		$_SESSION['sucesso']="Sexo do atetla é masculino <br/>";
 	}
 	if($distancia === "1")
 	{
-		$_SESSION['erro']="A distância selecionada é de 1 KM <br/>";
+		$_SESSION['sucesso']="A distância selecionada é de 1 KM <br/>";
 	}
 	else 
 	{
-		$_SESSION['erro']="A distância escolhida é de 3 KM <br/>";
+		$_SESSION['sucesso']="A distância escolhida é de 3 KM <br/>";
 	}
 	if($modalidade === 'convencional')
 	{
-		$_SESSION['erro']="A modalidade escolhida é: Convencional <br/>";
+		$_SESSION['sucesso']="A modalidade escolhida é: Convencional <br/>";
 	}
 	elseif ($modalidade === 'on')
 	{
-		$_SESSION['erro']="A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
+		$_SESSION['sucesso']="A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
 	}
 	else
 	{
-		$_SESSION['erro']="A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>"
+		$_SESSION['sucesso']="A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>"
 	}
 ?>

@@ -15,6 +15,11 @@
 <body>
 	<p>ATETLA FAÇA SUA INSCRIÇÃO</p>
 	<form action="script.php" method="post">
+		<?php 
+			$mensagemDeErro = isset($_SESSION['erro'])? $_SESSION['erro'] : '';
+			if(!empty($mensagemDeErro))
+				echo $mensagemDeErro;
+		 ?>
 		<p>Nome da/o Atetla: <input type="text" name="nome"/></p>
 		<p>Idade da/o Atetla: <input type="text" name="idade"/></p>
 		<p>Sexo: <select name="sexo">
