@@ -50,7 +50,7 @@ $modalidade = $_POST['modalidade'];
 	{
 		echo "A modalidade escolhida é: Convencional <br/>";
 	}
-	elseif ($modalidade === 'on')
+	else if ($modalidade === 'on')
 	 {
 		echo "A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
 	}
