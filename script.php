@@ -9,13 +9,13 @@ $modalidade = $_POST['modalidade'];
 	if(empty($nome))
 	{
 		$_SESSION['erro']="campo nome está vazio";
-		header(string:'location: index.php');
+		header("location: index.php");
 		return;
 	}
 	else if(is_numeric($nome))
 	{
 		$_SESSION['erro']="Campo nome foi preenchido com números";
-		header(string:'location: index.php');
+		header("location: index.php");
 		return;
 	}
 	else echo "Nome da/o Atetla: ". $nome . "</br>";
@@ -23,13 +23,13 @@ $modalidade = $_POST['modalidade'];
 	if (empty($idade)) 
 	{
 		$_SESSION['erro']="O campo idade está vazio";
-		header(string:'location: index.php');
+		header("location: index.php");
 		return;
 	}
 	else if(!is_numeric($idade)) 
 	{
 		$_SESSION['erro']="O campo idade foi preenchido com outros caracteres não numéricos";
-		header(string:'location: index.php');
+		header("location: index.php");
 		return;
 	}
 	else
