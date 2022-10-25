@@ -1,5 +1,9 @@
 <?php
-session_start();
+	session_start();
+?>
+
+<?php
+
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 $sexo = $_POST['sexo'];
@@ -33,33 +37,33 @@ $modalidade = $_POST['modalidade'];
 		return;
 	}
 	else
-	$_SESSION['erro']="Idade da/o atetla: ". $idade . "</br>"; 
+	echo "Idade da/o atetla: ". $idade . "</br>"; 
 	if($sexo === 'feminino')
 	{
-		$_SESSION['sucesso']="Sexo da atetla é feminino <br/>";
+		echo "Sexo da atetla é feminino <br/>";
 	}
 	else
 	 {
-		$_SESSION['sucesso']="Sexo do atetla é masculino <br/>";
+		echo "Sexo do atetla é masculino <br/>";
 	}
 	if($distancia === "1")
 	{
-		$_SESSION['sucesso']="A distância selecionada é de 1 KM <br/>";
+		echo "A distância selecionada é de 1 KM <br/>";
 	}
 	else 
 	{
-		$_SESSION['sucesso']="A distância escolhida é de 3 KM <br/>";
+		echo ="A distância escolhida é de 3 KM <br/>";
 	}
 	if($modalidade === 'convencional')
 	{
-		$_SESSION['sucesso']="A modalidade escolhida é: Convencional <br/>";
+		echo "A modalidade escolhida é: Convencional <br/>";
 	}
 	elseif ($modalidade === 'on')
 	{
-		$_SESSION['sucesso']="A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
+		echo "A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
 	}
 	else
 	{
-		$_SESSION['sucesso']="A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>"
+		echo "A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>";
 	}
 ?>
