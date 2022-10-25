@@ -38,7 +38,7 @@ $modalidade = $_POST['modalidade'];
 	 {
 		echo "Sexo do atetla é masculino <br/>";
 	}
-	if($distancia === '1')
+	if($distancia === "1")
 	{
 		echo "A distância selecionada é de 1 KM <br/>";
 	}
@@ -50,12 +50,12 @@ $modalidade = $_POST['modalidade'];
 	{
 		echo "A modalidade escolhida é: Convencional <br/>";
 	}
-	else if ($modalidade === 'on')
-	 {
+	elseif ($modalidade === 'on')
+	{
 		echo "A modalidade escolhida é: Óculos e Nadadeira (ON) <br/>";
 	}
 	else
 	{
-		echo "A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>";
+		echo "A modalidade escolhida é: Máscara, Respirador e Nadadeira (MRN) <br/>"
 	}
 ?>
